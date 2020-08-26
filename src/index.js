@@ -12,9 +12,9 @@ html, body {
   margin: 0px;
   padding: 0px;
   color: black;
-  font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+  box-sizing: border-box;
 }
 `;
 
