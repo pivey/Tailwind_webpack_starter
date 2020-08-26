@@ -1,17 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './assets/tailwind.css';
+import './assets/styles.css';
+import { createGlobalStyle } from 'styled-components';
+import { AppContainer, StyledForm } from './styles/index';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const GlobalStyle = createGlobalStyle`
+html, body {
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+`;
+
+const Index = () => (
+  <>
+    <GlobalStyle />
+    <React.StrictMode>
+      <AppContainer>
+        <StyledForm>
+          <form>
+            <input type="text" placeholder="Full name" />
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Password" />
+            <button type="button">Sign In</button>
+          </form>
+        </StyledForm>
+      </AppContainer>
+    </React.StrictMode>
+  </>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+ReactDOM.render(<Index />, document.getElementById('root'));
+
 serviceWorker.unregister();

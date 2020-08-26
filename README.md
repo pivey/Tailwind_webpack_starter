@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Practice application
 
-## Available Scripts
+- Use useState for basic and simple/small size applications.
 
-In the project directory, you can run:
+- Use useState + useReducer + useContext for advanced/medium size applications.
 
-### `npm start`
+- Use useState/useReducer + Redux for complex/large size applications.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    // "start": "npm run watch:css & react-scripts start",
+    // "build": "npm run build:css react-scripts build",
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Technologies
 
-### `npm test`
+1. styled-components:
+- allows for clean JSX rendered components, easy to read and use in function components
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. tailwind:
+- Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
 
-### `npm run build`
+tailwind classes can be quite long, and it causes our components to have some readability issues. Maintaining them can be tough. Styled-components are great but it can be long winded to write out all of the css
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- now you can use these classes to rapidly build components with tailwind and use regular styled components syntax when you need to deal with more complex pseudo states and transitions / animations etc.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+3. twin-macro:
+- allows the addition of tailwind classes to styled components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. babel:
+- React uses JSX syntax. Babel is a transpiler which converts the JSX to vanilla JavaScript. You can view babel as an intermediate step between your code and "executable" code.
 
-### `npm run eject`
+- React also uses ES6, which is not supported by most of the browsers. Babel converts the ES6 code to a code which is compatible with the browsers.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- The best combination for a mature React project would be React+babel+Webpack
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. webpack
+A static module bundler for JavaScript applications
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+— it takes all the code from your application and makes it usable in a web browser by bundling and optimizing front-end assets (JS, CSS, and Images).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- webpack uses a configuration file to determine how specific things are loaded into your application
