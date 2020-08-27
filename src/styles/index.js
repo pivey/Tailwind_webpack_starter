@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import tw from 'tailwind.macro';
+
+export const GlobalStyle = createGlobalStyle`
+html, body {
+  ${tw`
+  min-h-full
+  m-0 p-0
+  text-black
+  font-mono
+  `}
+}
+`;
 
 export const AppContainer = styled.div`
   ${tw`

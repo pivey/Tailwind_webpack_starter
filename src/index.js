@@ -2,21 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/tailwind.css';
 import './assets/styles.css';
-import { createGlobalStyle } from 'styled-components';
-import { AppContainer, StyledForm } from './styles/index';
+import { AppContainer, StyledForm, GlobalStyle } from './styles/index';
 import * as serviceWorker from './serviceWorker';
-
-const GlobalStyle = createGlobalStyle`
-html, body {
-  min-height: 100%;
-  margin: 0px;
-  padding: 0px;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-  box-sizing: border-box;
-}
-`;
 
 const Index = () => (
   <>
